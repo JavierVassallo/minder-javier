@@ -64,6 +64,13 @@
       "description": "Materias aprobadas 46/46",
       "category_id": "24c202cd-6076-58aa-a2e2-3bc3f7d99428",
       "completed": true
+    },
+    {
+      "category_id": "46265b1f-ffba-5cd2-9d55-36ec7e3ac095",
+      "completed": false,
+      "description": "Biasdasdasden maduros",
+      "id": "asdas",
+      "title": "Comprar 1kg dasdasdasdsde tomates"
     }
   ]
 }
