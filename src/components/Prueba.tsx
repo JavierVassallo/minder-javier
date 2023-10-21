@@ -21,7 +21,7 @@ const [postData, setPostData] = useState({
     category_id:"46265b1f-ffba-5cd2-9d55-36ec7e3ac095",
     completed:false,
     description :"Biasdasdasden maduros",
-    id: "asdas",
+    id: "qewrqwrqwreqwr",
     title:"Comprar 1kg dasdasdasdsde tomates"});
   const { sendPostData, loadingPost, errorPost } = usePost('http://localhost:3000/tasks');
 
