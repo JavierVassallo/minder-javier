@@ -73,4 +73,41 @@ export const usePost = (url='')=> {
   return { sendPostData, loadingPost, errorPost };
 }
 
+export const usePut = (url='')=>{
+  const [loadingPut, setLoadingPut] = useState(false);
+  const [errorPut, setErrorPut] = useState(null);
+
+  const sendPutData = async (data = {}) => {
+    console.log('me ejecuto send post')
+    setLoadingPut(true);
+    setErrorPut(null);
+
+    try {
+      const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('No pudo crear la entidad');
+      }
+
+      const responseData = await response.json();
+
+      setLoadingPut(false);
+
+      return responseData;
+    } catch (error:any) {
+      setErrorPut(error);
+      setLoadingPut(false);
+      return null;
+    }
+  };
+
+  return { sendPutData, loadingPut, errorPut };
+}
+
 
