@@ -49,7 +49,7 @@ export const usePost = (url='')=> {
       const response = await fetch(url, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // Puedes ajustar los encabezados según tus necesidades
+          'Content-Type': 'application/json', 
         },
         body: JSON.stringify(data),
       });
@@ -58,7 +58,6 @@ export const usePost = (url='')=> {
         throw new Error('No pudo crear la entidad');
       }
 
-      // Puedes omitir esta parte si no esperas una respuesta JSON
       const responseData = await response.json();
 
       setLoadingPost(false);
