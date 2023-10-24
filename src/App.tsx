@@ -4,6 +4,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
 import Prueba from './components/Prueba';
+import Home from './components/Home';
 
 const theme = createTheme();
 
@@ -12,7 +13,7 @@ function App() {
     <>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Prueba />
+        <Home />
       </ThemeProvider>
     </>
   )
