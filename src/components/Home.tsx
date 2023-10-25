@@ -26,20 +26,20 @@ const Home = ()=>{
     }
     useEffect(()=>{
       if(data && dataCategories){
-        console.log('dataCategories',dataCategories)
+        
         let pen =[]
         let fin = []
         data.forEach((task)=>{
             if(task.completed){
-                task.category = dataCategories.find((element)=> element.id === task.category_id)
-                fin.push(task)
+                const categoria = task.category = dataCategories.find((element)=> element.id === task.category_id)
+                fin.push({...task,category:categoria})
                 
             }else{
-                task.category = dataCategories.find((element)=> element.id === task.category_id)
-                pen.push(task)
+                const categoria2 = dataCategories.find((element)=> element.id === task.category_id)
+                pen.push({...task, category:categoria2})
             }
         })
-        console.log(pen,fin)
+        
         setPendientes(pen)
         setFinalizadas(fin)
       }  
@@ -67,8 +67,8 @@ const Home = ()=>{
                         Pendientes
                     </p>
                     <Grid>
-                        {pendientes.length > 0 && pendientes.map((p)=>{
-                                return <Task data={p} handleRefetch={handleRefetch} />
+                        {pendientes.length > 0 && pendientes.map((p,index)=>{
+                                return <Task key={index} data={p} handleRefetch={handleRefetch} />
                         })}
                         
                     </Grid>
@@ -77,8 +77,8 @@ const Home = ()=>{
                         Terminadas
                     </p>
                     <Grid>
-                    {finalizadas.length > 0 && finalizadas.map((f)=>{
-                                return <Task data={f} handleRefetch={handleRefetch} />
+                    {finalizadas.length > 0 && finalizadas.map((f, index)=>{
+                                return <Task key={index} data={f} handleRefetch={handleRefetch} />
                         })}
                     </Grid>
                 </Box>  
@@ -96,7 +96,12 @@ const Home = ()=>{
             </IconButton>
             </Box>
         </Box>
-        <ModalCreate open={open} handleClose={handleClose} />
+        <ModalCreate 
+            loadingCategories={loadingCategories} 
+            categories={dataCategories} open={open} 
+            handleClose={handleClose}
+            handleRefetch={handleRefetch}
+        />
         </>
         )
     )

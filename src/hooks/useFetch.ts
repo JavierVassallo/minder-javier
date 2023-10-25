@@ -41,7 +41,7 @@ export const usePost = (url='')=> {
   const [errorPost, setErrorPost] = useState(null);
 
   const sendPostData = async (data = {}) => {
-    console.log('me ejecuto send post')
+    
     setLoadingPost(true);
     setErrorPost(null);
 
@@ -78,7 +78,7 @@ export const usePut = (url='')=>{
   const [errorPut, setErrorPut] = useState(null);
 
   const sendPutData = async (data = {}) => {
-    console.log('me ejecuto send post')
+    
     setLoadingPut(true);
     setErrorPut(null);
 

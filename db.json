@@ -66,12 +66,7 @@
       "title": "Festejar el año 2065",
       "description": "Armar una gran fiesta para el año 2065 🥳💃🎉🎊",
       "category_id": "49078200-32bd-5718-a6e5-5c4e08c0ed9c",
-      "completed": false,
-      "category": {
-        "id": "49078200-32bd-5718-a6e5-5c4e08c0ed9c",
-        "name": "Entretenimiento",
-        "color": "#C2EBB0"
-      }
+      "completed": false
     },
     {
       "id": "1dea00ea-dd83-5338-b5d7-0b5177c8545e",

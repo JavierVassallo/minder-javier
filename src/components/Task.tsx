@@ -8,7 +8,7 @@ const Task = ({data, handleRefetch})=>{
     const handleChange = async ()=>{
         data.completed = !data.completed
         let respuesta = await sendPutData(data)
-        console.log('respuesta',respuesta)
+        
         
         handleRefetch()
     }
