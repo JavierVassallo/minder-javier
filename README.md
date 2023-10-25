@@ -1,5 +1,19 @@
 # Ejercicio técnico frontend - Minder
 
+## Notas Javier
+Decidi resolver el ejercicion utilizando customHooks en lugar de servicios para las peticiones al backend
+Estos CustomHooks retornan una Data, un loading, un error y en algunos casos un refetch(), muy similar al comportamiento de la libreria React Query
+
+Decidi no instalar librerias aparte de uuid, y mui, para que sea una aplicacion ligera.
+Podria haber usado formik para formularios por ejemplo pero me parecia exagerado.
+
+Se encontraran con una carpeta components (con los omponenetes)
+Y una carpeta hooks (con los custom hooks para hacer peticiones)
+
+Se utilizo el makeStyles de mui, pero poco, ya que me parecia mas veloz y no tan relevante en este caso usar directamente sx o styles sobre los componentes de mui
+
+Al instalar probablemente deban usar el --force por que no tuve tiempo de revisar el arbol de dependencias.
+
 ## Consigna
 A partir del código de este repositorio, crear una aplicación web (SPA) utlizando React que sirva para realizar un seguimiento de tareas pendientes (To-Do List).
 
